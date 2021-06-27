@@ -934,11 +934,13 @@ package STM32.Timers is
 
    type Timer_11_Remapping_Options is
      (TIM11_GPIO,
-      TIM11_HSE);
+       TIM11_HSE,
+       TIM11_MCO1);
 
    for Timer_11_Remapping_Options use  -- per RM page 676
      (TIM11_GPIO => 0,
-      TIM11_HSE  => 2);
+      TIM11_HSE  => 2,
+      TIM11_MCO1 => 3);
 
    procedure Configure_Timer_11_Remapping
      (This   : in out Timer;
